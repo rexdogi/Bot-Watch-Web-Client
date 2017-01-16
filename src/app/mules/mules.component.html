@@ -1,0 +1,13 @@
+<div>
+<div style="width: 200px;">
+  <p-listbox [options]="mules" [(ngModel)]="selectedMule"></p-listbox>
+  <br>
+  <button pButton type="button" (click)="start()" label="Start"></button>
+</div>
+<br>
+<div>
+  <h3>Add mule</h3>
+  <input id="in" type="text" size="30" pInputText [(ngModel)]="mule" />
+  <button pButton type="button" (click)="add()" label="Add"></button>
+</div>
+</div>

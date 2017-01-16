@@ -1,0 +1,14 @@
+<h1>Create accounts</h1>
+<h3>Account count: {{accounts}}</h3>
+<p-slider [(ngModel)]="accounts" [min]="1" [max]="100"></p-slider>
+
+<h3>Proxy count: {{proxies}}</h3>
+<p-slider [(ngModel)]="proxies" [min]="1" [max]="20"></p-slider>
+
+<h3>Email name</h3>
+<input id="in" type="text" size="30" pInputText [(ngModel)]="email" />
+<button (click)="submit()" pButton type="button" label="Submit"></button>
+
+<div *ngFor="let account of createdAccounts">
+  {{account}} has been created
+</div>

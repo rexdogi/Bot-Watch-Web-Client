@@ -1,0 +1,52 @@
+<style>
+
+  .container {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .left {
+    float:left;
+    width:50%;
+    overflow:hidden;
+  }
+
+  .right {
+    float:left;
+    width:50%;
+    overflow:hidden;
+  }
+
+</style>
+
+<div class="container">
+  <div class="left">
+    <br>
+    <h3>Select mule</h3>
+    <p-listbox [options]="mules" [(ngModel)]="selectedMule"></p-listbox>
+
+    <h3>Select account</h3>
+    <p-listbox [options]="accounts" [(ngModel)]="selectedName"></p-listbox>
+    <button style="margin-top: 10px" pButton type="button" (click)="start()" label="Start"></button>
+    <button style="margin-top: 10px" pButton type="button" (click)="deleteAccount()" label="Delete"></button>
+    <h3>Or select active account</h3>
+
+    <p-listbox [options]="activeAccount" [(ngModel)]="selectedActive"></p-listbox>
+    <button style="margin-top: 10px" pButton type="button" (click)="startActive()" label="Start active"></button>
+  </div>
+  <div class="right">
+    <br>
+    <h3>Select script</h3>
+    <p-listbox [options]="scripts" [(ngModel)]="selectedScript"></p-listbox>
+    <h3>Add script name</h3>
+    <input id="in" type="text" size="30" pInputText [(ngModel)]="scriptName" />
+    <button pButton type="button" (click)="add()" label="Add"></button>
+    <h3>Select how many accounts to start {{accountCount}}</h3>
+    <div style="max-width: 200px">
+    <p-slider [(ngModel)]="accountCount" [min]="1" [max]="20"></p-slider>
+    </div>
+  </div>
+</div>
+
+

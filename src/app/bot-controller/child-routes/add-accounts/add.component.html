@@ -1,0 +1,19 @@
+<h4>
+  Select account pack
+</h4>
+<p-listbox [options]="accounts" [(ngModel)]="selectedAccount"></p-listbox>
+<button style="margin-top: 10px" pButton type="button" (click)="submit()" label="Add"></button>
+
+<button style="margin-top: 10px" pButton type="button" (click)="remove()" label="Remove"></button>
+
+<h3>Add pack manually</h3>
+Name
+<input id="in" type="text" size="30" pInputText [(ngModel)]="name" />
+Count
+<input id="a" type="text" size="30" pInputText [(ngModel)]="count" />
+
+<button style="margin-top: 10px" pButton type="button" (click)="addManually()" label="Add"></button>
+
+<textarea rows="5" cols="30" [(ngModel)]="myText" pInputTextarea autoResize="autoResize"></textarea>
+
+<button style="margin-top: 10px" pButton type="button" (click)="addText()" label="Add"></button>
